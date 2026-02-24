@@ -11,11 +11,19 @@ Contrary to the prevailing industry assumption that "higher embedding dimensiona
 
 ## 🔬 Core Theoretical Framework
 
-Through extensive experimentation, we define the minimal intra-cluster semantic cohesion $$C_{min}(d)$$ as a function of the embedding dimension $$d$$. The theoretical boundary is formulated as:
+Through initial observation, we define the intra-cluster semantic cohesion $$C_{min}(d)$$ as a function of the embedding dimension $$d$$. We hypothesize the theoretical boundary follows a U-shaped empirical formula:
 
 $$
 C_{min}(d) = \frac{\alpha}{d} + \beta \cdot d - \gamma
 $$
+
+Where:
+*   $$\frac{\alpha}{d}$$ represents the **Information Compression Loss** at extremely low dimensions.
+*   $$\beta \cdot d$$ represents the **Curse of Dimensionality Penalty** (Semantic Topo-Gap) at excessively high dimensions.
+*   $$\alpha, \beta, \gamma$$ are empirical coefficients dependent on the baseline architecture and training corpus size.
+
+**Disclaimer on Empirical Fitting:** 
+The current curve visualizes an initial parameter fit based on a limited subset of models (e.g., Snowflake, BGE-M3, Nomic). Due to the small sample size ($$N$$), the exact values of $$\alpha$$ and $$\beta$$ are subject to calibration. A large-scale regression analysis across the full MTEB benchmark is currently underway to definitively compute the global optimum parameters. However, the fundamental structural existence of the U-shaped Semantic Topo-Gap holds.
 
 Status & Code Release:
 This repository is currently serving as a conceptual timestamp for the "Semantic Topo-Gap" discovery. The theoretical proofs and initial findings are locked as of Feb 24, 2026. The full source code, highly optimized C/Python hardware-level implementations, and the complete dataset will be open-sourced immediately following the formal publication of our paper.
