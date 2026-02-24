@@ -17,6 +17,10 @@ $$
 C_{min}(d) = \frac{\alpha}{d} + \beta \cdot d - \gamma
 $$
 
+Status & Code Release:
+This repository is currently serving as a conceptual timestamp for the "Semantic Topo-Gap" discovery. The theoretical proofs and initial findings are locked as of Feb 24, 2026. The full source code, highly optimized C/Python hardware-level implementations, and the complete dataset will be open-sourced immediately following the formal publication of our paper.
+
+
 Where:
 *   $$\frac{\alpha}{d}$$ represents the **Information Compression Loss** at extremely low dimensions.
 *   $$\beta \cdot d$$ represents the **Curse of Dimensionality Penalty** (Semantic Topo-Gap) at excessively high dimensions.
