@@ -36,7 +36,16 @@ To guarantee reproducibility, the initial framework was tested strictly under th
 *   **Evaluation Metric:** Robust variance and Moment Statistics across dimensional projections to measure empirical cluster density vs. semantic drift.
 
 ## 🚀 Implications & Future Work
-This framework challenges current representation learning scaling laws. It provides a mathematical basis for why compact models (like 768-D embeddings) often outperform hyper-dimensional embeddings in zero-shot retrieval and RAG (Retrieval-Augmented Generation) architectures. 
+This framework challenges current representation learning scaling laws. It provides a mathematical basis for why compact models (like 768-D embeddings) often outperform hyper-dimensional embeddings in zero-shot retrieval and RAG (Retrieval-Augmented Generation) architectures.
+
+
+## 📊 Empirical Observation & The "Architectural Gap"
+As shown in our verification plot, while the general baseline follows the theoretical U-shape curve, empirical models exhibit vertical offsets ($$\epsilon$$). This gap is mathematically significant:
+*   **Sub-boundary Models (e.g., Snowflake):** Demonstrate that aggressive contrastive learning and knowledge distillation can artificially compress the semantic space below the theoretical baseline ($$\epsilon < 0$$).
+*   **Super-boundary Models (e.g., bge-m3, multilingual):** Prove that multi-lingual alignment inherently introduces topological entanglement, increasing the intrinsic divergence floor ($$\epsilon > 0$$).
+
+The curve represents the fundamental dimensional scaling baseline, while the variance isolates the efficiency of the specific training architecture.
+
 
 A formal paper expanding on these proofs, complete with visual topological gap mapping and full algorithmic implementations, is currently being drafted for formal academic submission.
 
